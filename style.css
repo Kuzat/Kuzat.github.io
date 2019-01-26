@@ -1,0 +1,19 @@
+#button {
+	display: block;
+	margin: auto;
+	width: 30%;
+	height: 3rem;
+	background: red;
+	margin-top: 20%; 
+	font-size: 1.6rem;
+}
+
+#button:hover {
+	background: green;
+	cursor: pointer;
+}
+
+body {
+	background: url("kebab.jpg") no-repeat;
+	background-size: cover;
+}
