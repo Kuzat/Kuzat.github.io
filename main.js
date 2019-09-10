@@ -37,8 +37,6 @@ function updateProgress() {
 	const distanceProgress = (speed * ((today.getTime() - startDate.getTime()) / (1000*3600))) 
 	const progress = 100*distanceProgress/distance;
 
-	console.log(progress);
-
 
 	drawProgressLine(ctx, progress, "red");
 	drawProgressImage(ctx, progress);
