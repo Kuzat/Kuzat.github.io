@@ -4,8 +4,8 @@ vegard.src = './images/katt.jpg';
 var luna = new Image();
 luna.src = './images/meo.jpg';
 
-const ams_x = 178, ams_y = 501;
-const hk_x = 2230, hk_y = 1227;
+const ams_x = 306, ams_y = 800;
+const hk_x = 281, hk_y = 250;
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -27,9 +27,9 @@ function updateProgress() {
 
 	drawProgressLine(ctx, 0, "black"); // baseline
 
-	const distance = 9274.68369911277;
-	const startDate = new Date('2019-01-06');
-	const endDate = new Date('2019-05-31');
+	const distance = 1981.57;
+	const startDate = new Date('2019-09-01');
+	const endDate = new Date('2019-10-25');
 	const today = new Date();
 
 	const timeDifference = Math.abs(endDate.getTime() - startDate.getTime());
