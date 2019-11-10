@@ -1,11 +1,11 @@
 var vegard = new Image();
-vegard.src = './images/katt.jpg';
+vegard.src = './images/meo.jpg';
 
 var luna = new Image();
-luna.src = './images/meo.jpg';
+luna.src = './images/katt.jpg';
 
-const ams_x = 306, ams_y = 800;
-const hk_x = 281, hk_y = 250;
+const hk_x = 306, hk_y = 800;
+const ams_x = 281, ams_y = 250;
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -28,14 +28,18 @@ function updateProgress() {
 	drawProgressLine(ctx, 0, "black"); // baseline
 
 	const distance = 1981.57;
-	const startDate = new Date('2019-09-01');
-	const endDate = new Date('2019-10-25');
+	const startDate = new Date('2019-11-01');
+	const endDate = new Date('2019-12-21');
 	const today = new Date();
 
 	const timeDifference = Math.abs(endDate.getTime() - startDate.getTime());
 	const speed = distance / (timeDifference / (1000 * 3600))
 	const distanceProgress = (speed * ((today.getTime() - startDate.getTime()) / (1000*3600))) 
 	const progress = 100*distanceProgress/distance;
+
+	ctx.font = "82px Arial";
+	ctx.fillStyle = "white";
+	ctx.fillText(`Time left: ${dhm(endDate.getTime() - today.getTime())}`, 600, 300)
 
 
 	drawProgressLine(ctx, progress, "red");
@@ -62,4 +66,15 @@ function drawProgressImage(ctx, progress) {
 
 	ctx.drawImage(vegard, x-30, y-50, vegard.width/30, vegard.height/30);
 	ctx.drawImage(luna, ams_x-30, ams_y-50, luna.width/30, luna.height/30)
+}
+
+function dhm(ms){
+	days = Math.floor(ms / (24*60*60*1000));
+	daysms=ms % (24*60*60*1000);
+	hours = Math.floor((daysms)/(60*60*1000));
+	hoursms=ms % (60*60*1000);
+	minutes = Math.floor((hoursms)/(60*1000));
+	minutesms=ms % (60*1000);
+	sec = Math.floor((minutesms)/(1000));
+	return days+":"+hours+":"+minutes+":"+sec;
 }
