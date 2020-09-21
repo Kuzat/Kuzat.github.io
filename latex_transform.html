@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Latex transform</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="latex_style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>Latex Text Transform</h1>
+        <textarea autofocus name="transform-view" placeholder="Some \latex text here \cite{some2013dude}" id="transform-view"></textarea> <br /><br /><br />
+
+
+        <textarea onclick="this.focus();this.select()" readonly name="transform-result" id="transform-result" placeholder="Some  text here"></textarea>
+
+        <div class="alert" style="display: none;">
+            <span class="closebtn" onclick="this.parentNode.remove();">&times;</span>
+        </div>
+        <script src="transform.js" async defer></script>
+    </body>
+</html>
