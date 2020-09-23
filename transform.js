@@ -53,6 +53,9 @@ function transform(text) {
     // Remove big math inputs
     text = text.replace(big_math_regex, "");
 
+    // Remove comments
+    text = text.replace(/(%.*)/gm, "");
+
     // Remove leftover commands
     text = text.replace(/(\\\w*\[.*?\]?{.*?})|(\\\w*{.*?})|(\\\w*)|(\\\w*\[.*?\])|(\[.*?\])/gms, "");
 
