@@ -59,5 +59,8 @@ function transform(text) {
     // Remove leftover commands
     text = text.replace(/(\\\w*\[.*?\]?{.*?})|(\\\w*{.*?})|(\\\w*)|(\\\w*\[.*?\])|(\[.*?\])/gms, "");
 
+    // Remove unsued newlines
+    text = text.replace(/(^[ \t]*$\r?\n){3,}/gm, "");
+
     return text.trim();
 }
