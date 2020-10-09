@@ -33,7 +33,7 @@ output_field.addEventListener("click", (event) => {
 
 function transform(text) {
     const latex_strip_commands = ["cite", "label", "ref"];
-    const latex_replace_commands = ["section", "subsection", "subsubsection", "paragraph", "textbf"];
+    const latex_replace_commands = ["section", "subsection", "subsubsection", "paragraph", "textbf", "emph", "underline", "textit", "say", "textsc", "texttt", "textsl", "textup", "textmd"];
 
     const inner_regex = /{(.*?)}/;
     const big_math_regex = /\\\[.*?\\\]/gms;
